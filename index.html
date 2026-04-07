@@ -831,7 +831,7 @@
       var igIcon = '<svg class="ig-icon" width="28" height="28" viewBox="0 0 24 24" fill="white" stroke="none"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="white" stroke-width="1.5"/><circle cx="12" cy="12" r="5" fill="none" stroke="white" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1.5" fill="white" stroke="none"/></svg>';
       var html = '';
       instagramPosts.forEach(function(post) {
-        html += '<a href="' + post.postUrl + '" target="_blank" rel="noopener" class="instagram-item reveal">';
+        html += '<a href="' + post.postUrl + '" target="_blank" rel="noopener" class="instagram-item">';
         html += '<img src="' + post.image + '" alt="' + (post.alt || '').replace(/"/g, '&quot;') + '" loading="lazy">';
         html += igIcon;
         html += '</a>';
