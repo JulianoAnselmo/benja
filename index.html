@@ -10,6 +10,10 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.benjaeletrica.com.br/">
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
+
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
@@ -65,6 +69,12 @@
 
   <!-- Custom styles (minimal — only what Tailwind can't do) -->
   <style>
+    /* Prevent horizontal overflow on all screen sizes */
+    html, body {
+      overflow-x: hidden;
+      max-width: 100%;
+    }
+
     /* Gradient text for hero "aqui." */
     .text-gradient-orange {
       background: linear-gradient(135deg, #E8751A, #F5B731);
@@ -143,6 +153,33 @@
     /* Hide scrollbar for mobile carousels */
     .scrollbar-hide::-webkit-scrollbar { display: none; }
     .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+    /* Extra small screen overrides (< 380px) */
+    @media (max-width: 379px) {
+      /* Reduce hero headline on tiny screens */
+      #hero h1 { font-size: 1.625rem; line-height: 1.15; }
+
+      /* Prevent tracking label overflow */
+      .tracking-\[3px\] { letter-spacing: 1.5px; font-size: 0.65rem; }
+
+      /* Tighter hero padding */
+      #hero .py-10 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+
+      /* Stats: reduce gap */
+      .grid.grid-cols-2 { gap: 1rem; }
+    }
+
+    /* Touch target minimum size for interactive elements */
+    @media (max-width: 767px) {
+      .mobile-menu-link {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+      }
+      details summary {
+        min-height: 44px;
+      }
+    }
   </style>
 
   <!-- Schema.org JSON-LD -->
@@ -210,9 +247,9 @@
   <main id="conteudo">
     <!-- ========== NAVIGATION ========== -->
     <nav id="navbar" class="sticky top-0 z-40 bg-navy-800/95 backdrop-blur-md border-b border-white/5 transition-all duration-300">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center h-20 lg:h-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center h-16 sm:h-20 lg:h-24">
         <a href="#" class="flex items-center gap-2">
-          <img src="assets/images/logo.png" alt="BENJA Elétrica, Hidráulica e Iluminação" class="h-16 lg:h-20 w-auto">
+          <img src="assets/images/logo.png" alt="BENJA Elétrica, Hidráulica e Iluminação" class="h-12 sm:h-16 lg:h-20 w-auto max-w-[160px] sm:max-w-none">
         </a>
         <div class="hidden lg:flex items-center gap-8">
           <a href="#categorias" class="text-white/45 hover:text-white text-sm font-medium tracking-wide transition-colors">Categorias</a>
@@ -246,7 +283,7 @@
     </nav>
 
     <!-- ========== SECTION 1: HERO ========== -->
-    <section id="hero" class="relative bg-gradient-to-br from-[#070E1A] to-navy-800 overflow-hidden">
+    <section id="hero" class="relative bg-gradient-to-br from-[#070E1A] to-navy-800 overflow-hidden w-full">
       <div class="absolute right-0 top-0 bottom-0 w-2/5 hidden lg:block">
         <img src="assets/images/hero-bg.png" alt="Fachada da loja BENJA Elétrica, Hidráulica e Iluminação em Taquaritinga" class="absolute inset-0 w-full h-full object-cover">
         <div class="absolute inset-0 bg-gradient-to-r from-[#070E1A] via-[#070E1A]/70 to-transparent"></div>
@@ -255,7 +292,7 @@
       <div class="absolute -bottom-10 left-1/4 w-48 h-48 bg-orange-500/5 rounded-full blur-3xl"></div>
       <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-14 lg:py-16">
         <div class="max-w-xl lg:max-w-2xl">
-          <img src="assets/images/logo.png" alt="BENJA Elétrica, Hidráulica e Iluminação" class="h-36 sm:h-44 lg:h-52 w-auto mb-4 sm:mb-5 drop-shadow-2xl">
+          <img src="assets/images/logo.png" alt="BENJA Elétrica, Hidráulica e Iluminação" class="h-28 xs:h-32 sm:h-44 lg:h-52 w-auto max-w-[220px] sm:max-w-none mb-4 sm:mb-5 drop-shadow-2xl">
           <p class="text-xs sm:text-sm tracking-[3px] text-white/30 font-medium mb-3 sm:mb-4">REFERÊNCIA EM TAQUARITINGA</p>
           <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-white leading-[1.1] mb-3 sm:mb-4 tracking-tight">
             Construir com<br>
@@ -267,15 +304,15 @@
           </p>
           <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-5">
             <a href="https://wa.me/5516XXXXXXXXX?text=Olá!%20Vim%20pelo%20site%20da%20BENJA.%20Gostaria%20de%20mais%20informações." target="_blank" rel="noopener"
-               class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 sm:px-8 py-3.5 rounded-lg text-sm font-bold shadow-lg shadow-orange-500/30 hover:shadow-xl hover:shadow-orange-500/40 hover:-translate-y-0.5 transition-all">
+               class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 sm:px-8 py-3.5 min-h-[44px] rounded-lg text-sm font-bold shadow-lg shadow-orange-500/30 hover:shadow-xl hover:shadow-orange-500/40 hover:-translate-y-0.5 transition-all">
               💬 CHAMAR NO WHATSAPP
             </a>
             <a href="#contato"
-               class="inline-flex items-center justify-center gap-2 border border-white/15 text-white/65 hover:text-white hover:border-white/30 px-6 sm:px-8 py-3.5 rounded-lg text-sm font-medium transition-all">
+               class="inline-flex items-center justify-center gap-2 border border-white/15 text-white/65 hover:text-white hover:border-white/30 px-6 sm:px-8 py-3.5 min-h-[44px] rounded-lg text-sm font-medium transition-all">
               PEÇA SEU ORÇAMENTO
             </a>
           </div>
-          <div class="flex flex-wrap gap-4 sm:gap-6">
+          <div class="flex flex-wrap gap-3 sm:gap-6">
             <div class="flex items-center gap-2 text-xs sm:text-sm text-white/40">
               <img src="assets/icons/check.svg" alt="" class="w-4 h-4" style="filter: invert(55%) sepia(98%) saturate(1000%) hue-rotate(190deg);">
               <span>Atendimento especializado</span>
@@ -292,7 +329,7 @@
     <!-- ========== SECTION 2: TRUST BAR ========== -->
     <section class="bg-gradient-to-r from-blue-700 to-blue-600">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 text-center">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 text-center">
           <div class="reveal">
             <div class="w-12 h-12 mx-auto mb-3 rounded-xl bg-white/10 flex items-center justify-center">
               <img src="assets/icons/loja.svg" alt="" class="w-6 h-6 invert">
@@ -328,21 +365,21 @@
     <!-- ========== STATS BAR ========== -->
     <section class="bg-navy-800 border-y border-white/5">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-12">
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 text-center">
           <div class="reveal">
-            <div class="text-3xl sm:text-4xl font-black text-blue-400 mb-1">10+</div>
+            <div class="text-2xl sm:text-3xl lg:text-4xl font-black text-blue-400 mb-1">10+</div>
             <div class="text-xs sm:text-sm text-white/40 font-medium">Anos no mercado</div>
           </div>
           <div class="reveal">
-            <div class="text-3xl sm:text-4xl font-black text-orange-500 mb-1">3.000+</div>
+            <div class="text-2xl sm:text-3xl lg:text-4xl font-black text-orange-500 mb-1">3.000+</div>
             <div class="text-xs sm:text-sm text-white/40 font-medium">Clientes atendidos</div>
           </div>
           <div class="reveal">
-            <div class="text-3xl sm:text-4xl font-black text-blue-400 mb-1">5.000+</div>
+            <div class="text-2xl sm:text-3xl lg:text-4xl font-black text-blue-400 mb-1">5.000+</div>
             <div class="text-xs sm:text-sm text-white/40 font-medium">Produtos em estoque</div>
           </div>
           <div class="reveal">
-            <div class="text-3xl sm:text-4xl font-black text-amber-400 mb-1">4.9 ★</div>
+            <div class="text-2xl sm:text-3xl lg:text-4xl font-black text-amber-400 mb-1">4.9 ★</div>
             <div class="text-xs sm:text-sm text-white/40 font-medium">Avaliação no Google</div>
           </div>
         </div>
@@ -356,7 +393,7 @@
           <p class="text-xs tracking-[3px] text-orange-500 font-semibold mb-3">O QUE VOCÊ ENCONTRA</p>
           <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy-800">Soluções para cada etapa da sua obra</h2>
         </div>
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+        <div class="grid grid-cols-1 min-[380px]:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           <a href="https://wa.me/5516XXXXXXXXX?text=Olá!%20Tenho%20interesse%20em%20produtos%20de%20Elétrica." target="_blank" rel="noopener"
              class="group bg-white border border-gray-100 rounded-xl p-5 sm:p-6 text-center shadow-sm hover:shadow-lg hover:border-blue-500/30 hover:-translate-y-1 transition-all duration-300 reveal stagger-1">
             <div class="w-11 h-11 mx-auto mb-3 rounded-lg bg-blue-500/10 flex items-center justify-center">
@@ -432,18 +469,18 @@
           <p class="text-xs tracking-[3px] text-orange-500 font-semibold mb-3">MARCAS QUE VOCÊ ENCONTRA</p>
           <h2 class="text-xl sm:text-2xl font-extrabold text-navy-800">Trabalhamos com as melhores marcas do mercado</h2>
         </div>
-        <div class="flex flex-wrap justify-center items-center gap-8 sm:gap-12 lg:gap-16 reveal">
+        <div class="flex flex-wrap justify-center items-center gap-5 sm:gap-8 lg:gap-12 reveal">
           <!-- Marcas em texto estilizado (substituir por logos reais quando disponíveis) -->
-          <span class="text-lg sm:text-xl font-bold text-gray-300 hover:text-blue-500 transition-colors cursor-default">Tigre</span>
-          <span class="text-lg sm:text-xl font-bold text-gray-300 hover:text-blue-500 transition-colors cursor-default">Tramontina</span>
-          <span class="text-lg sm:text-xl font-bold text-gray-300 hover:text-blue-500 transition-colors cursor-default">Schneider</span>
-          <span class="text-lg sm:text-xl font-bold text-gray-300 hover:text-blue-500 transition-colors cursor-default">Philips</span>
-          <span class="text-lg sm:text-xl font-bold text-gray-300 hover:text-blue-500 transition-colors cursor-default">Lorenzetti</span>
-          <span class="text-lg sm:text-xl font-bold text-gray-300 hover:text-blue-500 transition-colors cursor-default">Amanco</span>
-          <span class="text-lg sm:text-xl font-bold text-gray-300 hover:text-blue-500 transition-colors cursor-default">Elgin</span>
-          <span class="text-lg sm:text-xl font-bold text-gray-300 hover:text-blue-500 transition-colors cursor-default">Intelbras</span>
-          <span class="text-lg sm:text-xl font-bold text-gray-300 hover:text-blue-500 transition-colors cursor-default">Vonder</span>
-          <span class="text-lg sm:text-xl font-bold text-gray-300 hover:text-blue-500 transition-colors cursor-default">Pial</span>
+          <span class="text-base sm:text-lg font-bold text-gray-300 hover:text-blue-500 transition-colors cursor-default">Tigre</span>
+          <span class="text-base sm:text-lg font-bold text-gray-300 hover:text-blue-500 transition-colors cursor-default">Tramontina</span>
+          <span class="text-base sm:text-lg font-bold text-gray-300 hover:text-blue-500 transition-colors cursor-default">Schneider</span>
+          <span class="text-base sm:text-lg font-bold text-gray-300 hover:text-blue-500 transition-colors cursor-default">Philips</span>
+          <span class="text-base sm:text-lg font-bold text-gray-300 hover:text-blue-500 transition-colors cursor-default">Lorenzetti</span>
+          <span class="text-base sm:text-lg font-bold text-gray-300 hover:text-blue-500 transition-colors cursor-default">Amanco</span>
+          <span class="text-base sm:text-lg font-bold text-gray-300 hover:text-blue-500 transition-colors cursor-default">Elgin</span>
+          <span class="text-base sm:text-lg font-bold text-gray-300 hover:text-blue-500 transition-colors cursor-default">Intelbras</span>
+          <span class="text-base sm:text-lg font-bold text-gray-300 hover:text-blue-500 transition-colors cursor-default">Vonder</span>
+          <span class="text-base sm:text-lg font-bold text-gray-300 hover:text-blue-500 transition-colors cursor-default">Pial</span>
         </div>
         <p class="text-center text-xs text-gray-400 mt-6">E muitas outras. Consulte disponibilidade.</p>
       </div>
@@ -497,7 +534,7 @@
             <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center flex-shrink-0">
               <img src="assets/icons/construindo.svg" alt="" class="w-6 h-6" style="filter: invert(35%) sepia(98%) saturate(1000%) hue-rotate(200deg);">
             </div>
-            <div>
+            <div class="min-w-0">
               <h3 class="font-bold text-sm text-navy-800">Quem está construindo</h3>
               <p class="text-xs text-gray-500 mt-0.5">Material completo do início ao acabamento</p>
             </div>
@@ -548,7 +585,7 @@
           <span class="inline-block bg-white/20 rounded-full px-4 py-1.5 text-xs font-semibold text-white mb-4">
             🔥 PROMOÇÃO DA SEMANA
           </span>
-          <h2 class="text-2xl sm:text-3xl font-black text-white mb-3 reveal">
+          <h2 class="text-xl sm:text-2xl lg:text-3xl font-black text-white mb-3 reveal">
             Condições especiais para sua obra
           </h2>
           <p class="text-white/70 text-sm sm:text-base leading-relaxed mb-6 max-w-md reveal">
@@ -619,7 +656,7 @@
             @benja.eletricahidraulica
           </a>
         </div>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4" id="instagramGrid">
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-2 sm:gap-3 md:gap-4" id="instagramGrid">
           <!-- Loaded dynamically from instagramPosts -->
         </div>
       </div>
@@ -629,7 +666,7 @@
     <section id="sobre" class="bg-gradient-to-br from-[#070E1A] to-navy-800">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20 lg:py-24">
         <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 lg:gap-16">
-          <div class="w-40 h-40 sm:w-48 sm:h-48 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center flex-shrink-0 reveal overflow-hidden p-4">
+          <div class="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center flex-shrink-0 reveal overflow-hidden p-4">
             <img src="assets/images/logo.png" alt="BENJA" class="w-full h-full object-contain">
           </div>
           <div class="reveal">
@@ -716,16 +753,16 @@
               <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center flex-shrink-0">
                 <img src="assets/icons/map-pin.svg" alt="" class="w-5 h-5" style="filter: invert(35%) sepia(98%) saturate(1000%) hue-rotate(200deg);">
               </div>
-              <div>
+              <div class="min-w-0">
                 <p class="font-bold text-sm text-navy-800">Endereço</p>
-                <p class="text-sm text-gray-500">Rua Da República, 409 — Centro, Taquaritinga - SP</p>
+                <p class="text-sm text-gray-500 break-words">Rua Da República, 409 — Centro, Taquaritinga - SP</p>
               </div>
             </div>
             <div class="flex items-center gap-4 py-4 border-b border-gray-100">
               <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center flex-shrink-0">
                 <img src="assets/icons/phone.svg" alt="" class="w-5 h-5" style="filter: invert(35%) sepia(98%) saturate(1000%) hue-rotate(200deg);">
               </div>
-              <div>
+              <div class="min-w-0">
                 <p class="font-bold text-sm text-navy-800">Telefone</p>
                 <a href="tel:+551632531567" class="text-sm text-gray-500 hover:text-blue-500 transition-colors">(16) 3253-1567</a>
               </div>
@@ -734,7 +771,7 @@
               <div class="w-10 h-10 rounded-lg bg-orange-500/10 flex items-center justify-center flex-shrink-0">
                 <img src="assets/icons/whatsapp.svg" alt="" class="w-5 h-5" style="filter: invert(50%) sepia(98%) saturate(800%) hue-rotate(350deg);">
               </div>
-              <div>
+              <div class="min-w-0">
                 <p class="font-bold text-sm text-navy-800">WhatsApp</p>
                 <a href="https://wa.me/5516XXXXXXXXX?text=Olá!%20Vim%20pelo%20site%20da%20BENJA." target="_blank" rel="noopener" class="text-sm text-gray-500 hover:text-orange-500 transition-colors">Clique para conversar</a>
               </div>
@@ -743,7 +780,7 @@
               <div class="w-10 h-10 rounded-lg bg-amber-400/10 flex items-center justify-center flex-shrink-0">
                 <img src="assets/icons/clock.svg" alt="" class="w-5 h-5" style="filter: invert(60%) sepia(98%) saturate(500%) hue-rotate(10deg);">
               </div>
-              <div>
+              <div class="min-w-0">
                 <p class="font-bold text-sm text-navy-800">Horário</p>
                 <p class="text-xs text-gray-500 leading-relaxed">Seg a Sex: 7h–18h30 · Sáb: 8h–16h · Dom: 8h–12h</p>
               </div>
@@ -760,7 +797,7 @@
             </div>
           </div>
           <div class="reveal">
-            <div class="rounded-xl overflow-hidden border border-gray-100 shadow-sm h-72 sm:h-80 lg:h-full lg:min-h-[360px]">
+            <div class="rounded-xl overflow-hidden border border-gray-100 shadow-sm h-64 sm:h-72 lg:h-full lg:min-h-[360px]">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.5!2d-48.5053!3d-21.4053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sRua+Da+Rep%C3%BAblica%2C+409%2C+Taquaritinga+-+SP!5e0!3m2!1spt-BR!2sbr!4v1"
                 width="100%"
@@ -782,9 +819,9 @@
   <!-- ========== SECTION 10: FOOTER ========== -->
   <footer class="bg-navy-900 border-t-[3px] border-orange-500">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 pb-10 border-b border-white/5">
-        <div class="col-span-2 lg:col-span-1">
-          <a href="#"><img src="assets/images/logo.png" alt="BENJA" class="h-20 w-auto"></a>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 pb-10 border-b border-white/5">
+        <div class="sm:col-span-2 lg:col-span-1">
+          <a href="#"><img src="assets/images/logo.png" alt="BENJA" class="h-16 sm:h-20 w-auto max-w-[180px]"></a>
           <p class="text-white/35 text-xs leading-relaxed mt-3 max-w-xs">
             Referência em elétrica, hidráulica e iluminação em Taquaritinga e região. Atendimento especializado para quem constrói e reforma.
           </p>
@@ -849,13 +886,14 @@
   <!-- ========== WHATSAPP FLOATING BUTTON ========== -->
   <a href="https://wa.me/5516XXXXXXXXX?text=Olá!%20Vim%20pelo%20site%20da%20BENJA.%20Gostaria%20de%20mais%20informações." target="_blank" rel="noopener"
      aria-label="Conversar no WhatsApp"
-     class="fixed bottom-5 right-5 z-50 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg shadow-green-500/30 animate-pulse-whatsapp hover:scale-110 transition-transform">
+     class="fixed bottom-4 right-4 z-50 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg shadow-green-500/30 animate-pulse-whatsapp hover:scale-110 transition-transform">
     <img src="assets/icons/whatsapp.svg" alt="" class="w-7 h-7 invert">
   </a>
 
   <!-- ========== BACK TO TOP BUTTON ========== -->
+  <!-- Positioned above WhatsApp button to avoid overlap -->
   <button id="back-to-top" aria-label="Voltar ao topo"
-          class="fixed bottom-5 right-24 z-50 w-11 h-11 bg-blue-600 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-blue-700">
+          class="fixed bottom-20 right-4 z-50 w-11 h-11 bg-blue-600 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-blue-700">
     <img src="assets/icons/arrow-up.svg" alt="" class="w-5 h-5 invert">
   </button>
 
