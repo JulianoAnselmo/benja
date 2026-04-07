@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apresentacao — Site BENJA Eletrica</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { 800: '#0D1B2E', 900: '#060D18' },
+            blue: { 400: '#1A8FFF', 500: '#1A6FD9', 600: '#0A4DA0' },
+            orange: { 500: '#E8751A', 600: '#D4600A' },
+            amber: { 400: '#F5B731' },
+          },
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+        },
+      },
+    }
+  </script>
+  <style>
+    .fade-in { animation: fadeIn 0.8s ease forwards; opacity: 0; }
+    .fade-in-delay-1 { animation-delay: 0.2s; }
+    .fade-in-delay-2 { animation-delay: 0.4s; }
+    .fade-in-delay-3 { animation-delay: 0.6s; }
+    .fade-in-delay-4 { animation-delay: 0.8s; }
+    @keyframes fadeIn { to { opacity: 1; } }
+    .phone-mockup {
+      width: 280px; height: 560px;
+      border: 8px solid #333; border-radius: 36px;
+      overflow: hidden; box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+      position: relative; background: #000;
+    }
+    .phone-mockup iframe { width: 100%; height: 100%; border: none; }
+    .phone-notch {
+      position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+      width: 120px; height: 24px; background: #333;
+      border-radius: 0 0 16px 16px; z-index: 10;
+    }
+  </style>
+</head>
+<body class="font-sans bg-navy-900 text-white">
+
+  <!-- ===== SLIDE 1: CAPA ===== -->
+  <section class="min-h-screen flex flex-col items-center justify-center px-6 text-center">
+    <img src="assets/images/logo.png" alt="BENJA" class="h-48 w-auto mb-8 fade-in">
+    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black mb-4 fade-in fade-in-delay-1">
+      Proposta de <span class="text-orange-500">Site Profissional</span>
+    </h1>
+    <p class="text-lg text-white/50 max-w-xl fade-in fade-in-delay-2">
+      BENJA Eletrica, Hidraulica e Iluminacao — Taquaritinga, SP
+    </p>
+    <div class="mt-12 fade-in fade-in-delay-3">
+      <a href="#problema" class="text-blue-400 text-sm font-medium animate-bounce inline-block">
+        Scroll para ver ↓
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== SLIDE 2: PROBLEMA ===== -->
+  <section id="problema" class="min-h-screen flex flex-col items-center justify-center px-6 text-center bg-navy-800">
+    <p class="text-xs tracking-[4px] text-orange-500 font-semibold mb-6">O PROBLEMA</p>
+    <h2 class="text-3xl sm:text-4xl font-extrabold mb-8 max-w-3xl">
+      Hoje, quem procura "eletrica em Taquaritinga" no Google<br>
+      <span class="text-orange-500">nao encontra a BENJA.</span>
+    </h2>
+    <div class="grid sm:grid-cols-3 gap-6 max-w-3xl w-full mt-4">
+      <div class="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
+        <div class="text-3xl mb-3">📱</div>
+        <p class="text-sm text-white/50">Instagram sozinho<br><strong class="text-white">nao aparece no Google</strong></p>
+      </div>
+      <div class="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
+        <div class="text-3xl mb-3">🔍</div>
+        <p class="text-sm text-white/50">Clientes buscam no Google<br><strong class="text-white">e acham o concorrente</strong></p>
+      </div>
+      <div class="bg-white/5 border border-white/10 rounded-xl p-6 text-center">
+        <div class="text-3xl mb-3">💬</div>
+        <p class="text-sm text-white/50">Sem site profissional<br><strong class="text-white">perde credibilidade</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SLIDE 3: SOLUCAO ===== -->
+  <section class="min-h-screen flex flex-col items-center justify-center px-6 text-center">
+    <p class="text-xs tracking-[4px] text-orange-500 font-semibold mb-6">A SOLUCAO</p>
+    <h2 class="text-3xl sm:text-4xl font-extrabold mb-4 max-w-3xl">
+      Um site que trabalha<br><span class="text-blue-400">24 horas por voce.</span>
+    </h2>
+    <p class="text-white/50 max-w-xl mb-12">
+      Profissional, rapido, otimizado para Google, com foco total em gerar contatos no WhatsApp.
+    </p>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl w-full">
+      <div class="bg-gradient-to-br from-blue-600 to-blue-500 rounded-xl p-5 text-left">
+        <div class="text-2xl mb-2">🎯</div>
+        <h3 class="font-bold text-sm mb-1">SEO Local</h3>
+        <p class="text-xs text-white/70">Aparece no Google quando buscam eletrica, hidraulica ou iluminacao em Taquaritinga</p>
+      </div>
+      <div class="bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl p-5 text-left">
+        <div class="text-2xl mb-2">💬</div>
+        <h3 class="font-bold text-sm mb-1">WhatsApp Direto</h3>
+        <p class="text-xs text-white/70">Cada clique ja envia mensagem automatica com o interesse do cliente</p>
+      </div>
+      <div class="bg-gradient-to-br from-blue-600 to-blue-500 rounded-xl p-5 text-left">
+        <div class="text-2xl mb-2">📸</div>
+        <h3 class="font-bold text-sm mb-1">Instagram Auto</h3>
+        <p class="text-xs text-white/70">Posts do Instagram atualizam sozinhos no site todo dia, sem voce fazer nada</p>
+      </div>
+      <div class="bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl p-5 text-left">
+        <div class="text-2xl mb-2">⚡</div>
+        <h3 class="font-bold text-sm mb-1">Ultra Rapido</h3>
+        <p class="text-xs text-white/70">Carrega em menos de 1 segundo. Sem lentidao, sem espera, sem perder cliente</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SLIDE 4: PREVIEW DESKTOP ===== -->
+  <section class="min-h-screen flex flex-col items-center justify-center px-6 text-center bg-navy-800">
+    <p class="text-xs tracking-[4px] text-orange-500 font-semibold mb-6">O RESULTADO</p>
+    <h2 class="text-3xl sm:text-4xl font-extrabold mb-10">Veja como ficou</h2>
+    <div class="w-full max-w-5xl rounded-xl overflow-hidden shadow-2xl shadow-black/50 border border-white/10">
+      <div class="bg-gray-800 flex items-center gap-2 px-4 py-2.5">
+        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+        <div class="flex-1 mx-4">
+          <div class="bg-gray-700 rounded-md px-3 py-1 text-xs text-white/40 text-center">www.benjaeletrica.com.br</div>
+        </div>
+      </div>
+      <iframe src="index.html" class="w-full h-[500px] sm:h-[600px] lg:h-[700px]" title="Preview do site BENJA"></iframe>
+    </div>
+    <p class="text-white/30 text-sm mt-6">Navegue dentro do preview acima — o site e 100% funcional</p>
+  </section>
+
+  <!-- ===== SLIDE 5: PREVIEW MOBILE ===== -->
+  <section class="min-h-screen flex flex-col items-center justify-center px-6 text-center">
+    <p class="text-xs tracking-[4px] text-orange-500 font-semibold mb-6">MOBILE FIRST</p>
+    <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">Perfeito no celular</h2>
+    <p class="text-white/50 max-w-md mb-10">Mais de 70% dos seus clientes vao acessar pelo celular. O site foi pensado para isso.</p>
+    <div class="phone-mockup">
+      <div class="phone-notch"></div>
+      <iframe src="index.html" class="w-full h-full" title="Preview mobile do site BENJA"></iframe>
+    </div>
+  </section>
+
+  <!-- ===== SLIDE 6: FUNCIONALIDADES ===== -->
+  <section class="min-h-screen flex flex-col items-center justify-center px-6 bg-navy-800">
+    <p class="text-xs tracking-[4px] text-orange-500 font-semibold mb-6 text-center">O QUE ESTA INCLUSO</p>
+    <h2 class="text-3xl sm:text-4xl font-extrabold mb-10 text-center">Tudo isso no seu site</h2>
+    <div class="grid sm:grid-cols-2 gap-4 max-w-2xl w-full">
+      <div class="flex items-start gap-3 bg-white/5 rounded-lg p-4">
+        <span class="text-green-400 text-lg mt-0.5">✓</span>
+        <div>
+          <p class="font-bold text-sm">Site institucional premium</p>
+          <p class="text-xs text-white/40">Design exclusivo, nao e template</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-3 bg-white/5 rounded-lg p-4">
+        <span class="text-green-400 text-lg mt-0.5">✓</span>
+        <div>
+          <p class="font-bold text-sm">10+ secoes completas</p>
+          <p class="text-xs text-white/40">Hero, categorias, diferenciais, depoimentos, contato e mais</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-3 bg-white/5 rounded-lg p-4">
+        <span class="text-green-400 text-lg mt-0.5">✓</span>
+        <div>
+          <p class="font-bold text-sm">SEO local otimizado</p>
+          <p class="text-xs text-white/40">Schema.org, meta tags, keywords de Taquaritinga</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-3 bg-white/5 rounded-lg p-4">
+        <span class="text-green-400 text-lg mt-0.5">✓</span>
+        <div>
+          <p class="font-bold text-sm">WhatsApp integrado</p>
+          <p class="text-xs text-white/40">Mensagens automaticas por categoria</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-3 bg-white/5 rounded-lg p-4">
+        <span class="text-green-400 text-lg mt-0.5">✓</span>
+        <div>
+          <p class="font-bold text-sm">Instagram automatico</p>
+          <p class="text-xs text-white/40">Atualiza os 9 ultimos posts todo dia</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-3 bg-white/5 rounded-lg p-4">
+        <span class="text-green-400 text-lg mt-0.5">✓</span>
+        <div>
+          <p class="font-bold text-sm">100% responsivo</p>
+          <p class="text-xs text-white/40">Funciona perfeito em celular, tablet e desktop</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-3 bg-white/5 rounded-lg p-4">
+        <span class="text-green-400 text-lg mt-0.5">✓</span>
+        <div>
+          <p class="font-bold text-sm">Google Maps com rota</p>
+          <p class="text-xs text-white/40">Cliente clica e abre o caminho ate a loja</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-3 bg-white/5 rounded-lg p-4">
+        <span class="text-green-400 text-lg mt-0.5">✓</span>
+        <div>
+          <p class="font-bold text-sm">Area promocional editavel</p>
+          <p class="text-xs text-white/40">Voce troca a promocao da semana quando quiser</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-3 bg-white/5 rounded-lg p-4">
+        <span class="text-green-400 text-lg mt-0.5">✓</span>
+        <div>
+          <p class="font-bold text-sm">Performance maxima</p>
+          <p class="text-xs text-white/40">Carrega em menos de 1 segundo</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-3 bg-white/5 rounded-lg p-4">
+        <span class="text-green-400 text-lg mt-0.5">✓</span>
+        <div>
+          <p class="font-bold text-sm">FAQ com duvidas frequentes</p>
+          <p class="text-xs text-white/40">Responde as perguntas antes do cliente ligar</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SLIDE 7: COMPARATIVO ===== -->
+  <section class="min-h-screen flex flex-col items-center justify-center px-6 text-center">
+    <p class="text-xs tracking-[4px] text-orange-500 font-semibold mb-6">COMPARATIVO</p>
+    <h2 class="text-3xl sm:text-4xl font-extrabold mb-10">Sem site vs. Com site BENJA</h2>
+    <div class="grid sm:grid-cols-2 gap-6 max-w-3xl w-full">
+      <!-- SEM -->
+      <div class="bg-white/5 border border-red-500/20 rounded-xl p-6 text-left">
+        <div class="text-red-400 font-bold text-sm mb-4 flex items-center gap-2">
+          <span class="text-xl">✕</span> Sem site profissional
+        </div>
+        <ul class="space-y-3 text-sm text-white/50">
+          <li class="flex items-start gap-2"><span class="text-red-400">•</span> Invisivel no Google</li>
+          <li class="flex items-start gap-2"><span class="text-red-400">•</span> Depende so do Instagram</li>
+          <li class="flex items-start gap-2"><span class="text-red-400">•</span> Sem credibilidade digital</li>
+          <li class="flex items-start gap-2"><span class="text-red-400">•</span> Cliente nao encontra horario, endereco, telefone facil</li>
+          <li class="flex items-start gap-2"><span class="text-red-400">•</span> Perde cliente para concorrente com site</li>
+          <li class="flex items-start gap-2"><span class="text-red-400">•</span> Sem conversao automatica</li>
+        </ul>
+      </div>
+      <!-- COM -->
+      <div class="bg-white/5 border border-green-500/20 rounded-xl p-6 text-left">
+        <div class="text-green-400 font-bold text-sm mb-4 flex items-center gap-2">
+          <span class="text-xl">✓</span> Com site BENJA
+        </div>
+        <ul class="space-y-3 text-sm text-white/50">
+          <li class="flex items-start gap-2"><span class="text-green-400">•</span> Aparece nas buscas de Taquaritinga</li>
+          <li class="flex items-start gap-2"><span class="text-green-400">•</span> Instagram + Google + WhatsApp integrados</li>
+          <li class="flex items-start gap-2"><span class="text-green-400">•</span> Aparencia de empresa grande e confiavel</li>
+          <li class="flex items-start gap-2"><span class="text-green-400">•</span> Tudo acessivel em 1 clique</li>
+          <li class="flex items-start gap-2"><span class="text-green-400">•</span> Marca valorizada acima da concorrencia</li>
+          <li class="flex items-start gap-2"><span class="text-green-400">•</span> WhatsApp recebe leads automaticos</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SLIDE 8: CTA FINAL ===== -->
+  <section class="min-h-screen flex flex-col items-center justify-center px-6 text-center bg-gradient-to-br from-navy-800 to-navy-900">
+    <img src="assets/images/logo.png" alt="BENJA" class="h-32 w-auto mb-8">
+    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-4">
+      Pronto para colocar a BENJA<br><span class="text-orange-500">no mapa digital?</span>
+    </h2>
+    <p class="text-white/50 max-w-lg mb-10">
+      O site ja esta pronto. So falta o seu OK para publicar e comecar a gerar resultados.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4">
+      <a href="index.html" class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-xl text-lg font-bold shadow-lg shadow-orange-500/30 hover:shadow-xl hover:-translate-y-0.5 transition-all">
+        Ver o site completo →
+      </a>
+    </div>
+    <p class="text-white/20 text-xs mt-16">Desenvolvido com dedicacao para a BENJA Eletrica, Hidraulica e Iluminacao.</p>
+  </section>
+
+</body>
+</html>
