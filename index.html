@@ -171,7 +171,297 @@
   </a>
 
   <main id="conteudo">
-    <!-- Sections will be added in subsequent tasks -->
+    <!-- ========== TOP BAR ========== -->
+    <div class="bg-navy-900/80 border-b border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center py-2 text-xs text-white/40">
+        <span class="hidden sm:inline">Seg a Sex: 7h–18h30 · Sáb: 8h–16h · Dom: 8h–12h</span>
+        <span class="sm:hidden">Seg-Sex 7h–18h30</span>
+        <a href="tel:+551632531567" class="text-orange-500 hover:text-orange-400 transition-colors font-semibold">
+          📞 (16) 3253-1567
+        </a>
+      </div>
+    </div>
+
+    <!-- ========== NAVIGATION ========== -->
+    <nav id="navbar" class="sticky top-0 z-40 bg-navy-800/95 backdrop-blur-md border-b border-white/5 transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center h-16 lg:h-20">
+        <a href="#" class="flex items-center gap-3">
+          <span class="text-blue-400 font-black text-2xl tracking-widest">BENJA</span>
+          <span class="hidden md:inline text-white/30 text-xs border-l border-white/10 pl-3 leading-tight">Elétrica, Hidráulica<br>e Iluminação</span>
+        </a>
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#categorias" class="text-white/45 hover:text-white text-sm font-medium tracking-wide transition-colors">Categorias</a>
+          <a href="#diferenciais" class="text-white/45 hover:text-white text-sm font-medium tracking-wide transition-colors">Diferenciais</a>
+          <a href="#sobre" class="text-white/45 hover:text-white text-sm font-medium tracking-wide transition-colors">Sobre</a>
+          <a href="#contato" class="text-white/45 hover:text-white text-sm font-medium tracking-wide transition-colors">Contato</a>
+          <a href="https://wa.me/5516XXXXXXXXX?text=Olá!%20Vim%20pelo%20site%20da%20BENJA.%20Gostaria%20de%20mais%20informações." target="_blank" rel="noopener" class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-5 py-2.5 rounded-lg text-sm font-bold hover:shadow-lg hover:shadow-orange-500/25 transition-all">
+            Peça Orçamento
+          </a>
+        </div>
+        <button id="menu-toggle" class="lg:hidden w-10 h-10 flex items-center justify-center text-white/60 hover:text-white transition-colors" aria-label="Abrir menu">
+          <img src="assets/icons/menu.svg" alt="" class="w-6 h-6 invert opacity-60" id="menu-icon-open">
+          <img src="assets/icons/close.svg" alt="" class="w-6 h-6 invert opacity-60 hidden" id="menu-icon-close">
+        </button>
+      </div>
+      <div id="mobile-menu" class="lg:hidden hidden bg-navy-800/98 backdrop-blur-md border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col gap-4">
+          <a href="#categorias" class="text-white/60 hover:text-white text-base font-medium py-2 transition-colors mobile-menu-link">Categorias</a>
+          <a href="#diferenciais" class="text-white/60 hover:text-white text-base font-medium py-2 transition-colors mobile-menu-link">Diferenciais</a>
+          <a href="#sobre" class="text-white/60 hover:text-white text-base font-medium py-2 transition-colors mobile-menu-link">Sobre</a>
+          <a href="#contato" class="text-white/60 hover:text-white text-base font-medium py-2 transition-colors mobile-menu-link">Contato</a>
+          <div class="flex flex-col gap-3 pt-4 border-t border-white/10">
+            <a href="tel:+551632531567" class="text-white/60 text-sm font-medium">📞 (16) 3253-1567</a>
+            <a href="https://wa.me/5516XXXXXXXXX?text=Olá!%20Vim%20pelo%20site%20da%20BENJA.%20Gostaria%20de%20mais%20informações." target="_blank" rel="noopener" class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-5 py-3 rounded-lg text-sm font-bold text-center">
+              💬 Chamar no WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ========== SECTION 1: HERO ========== -->
+    <section id="hero" class="relative bg-gradient-to-br from-[#070E1A] to-navy-800 overflow-hidden">
+      <div class="absolute right-0 top-0 bottom-0 w-2/5 hidden lg:block">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-blue-500/5"></div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="text-center opacity-20">
+            <div class="text-6xl mb-2">💡</div>
+            <p class="text-white text-xs">Foto real aqui</p>
+          </div>
+        </div>
+      </div>
+      <div class="absolute -top-20 -right-20 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
+      <div class="absolute -bottom-10 left-1/4 w-48 h-48 bg-orange-500/5 rounded-full blur-3xl"></div>
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20 lg:py-28">
+        <div class="max-w-xl lg:max-w-2xl">
+          <p class="text-xs sm:text-sm tracking-[3px] text-white/30 font-medium mb-4 sm:mb-6">REFERÊNCIA EM TAQUARITINGA</p>
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-white leading-[1.1] mb-4 sm:mb-6 tracking-tight">
+            Construir com<br>
+            confiança começa<br>
+            <span class="text-gradient-orange">aqui.</span>
+          </h1>
+          <p class="text-sm sm:text-base text-white/50 leading-relaxed mb-8 max-w-lg">
+            A maior variedade em elétrica, hidráulica e iluminação de Taquaritinga. Atendimento especializado para quem constrói, reforma ou instala.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8">
+            <a href="https://wa.me/5516XXXXXXXXX?text=Olá!%20Vim%20pelo%20site%20da%20BENJA.%20Gostaria%20de%20mais%20informações." target="_blank" rel="noopener"
+               class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 sm:px-8 py-3.5 rounded-lg text-sm font-bold shadow-lg shadow-orange-500/30 hover:shadow-xl hover:shadow-orange-500/40 hover:-translate-y-0.5 transition-all">
+              💬 CHAMAR NO WHATSAPP
+            </a>
+            <a href="#contato"
+               class="inline-flex items-center justify-center gap-2 border border-white/15 text-white/65 hover:text-white hover:border-white/30 px-6 sm:px-8 py-3.5 rounded-lg text-sm font-medium transition-all">
+              PEÇA SEU ORÇAMENTO
+            </a>
+          </div>
+          <div class="flex flex-wrap gap-4 sm:gap-6">
+            <div class="flex items-center gap-2 text-xs sm:text-sm text-white/40">
+              <img src="assets/icons/check.svg" alt="" class="w-4 h-4" style="filter: invert(55%) sepia(98%) saturate(1000%) hue-rotate(190deg);">
+              <span>Atendimento especializado</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs sm:text-sm text-white/40">
+              <img src="assets/icons/check.svg" alt="" class="w-4 h-4" style="filter: invert(55%) sepia(98%) saturate(1000%) hue-rotate(190deg);">
+              <span>Variedade completa</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SECTION 2: TRUST BAR ========== -->
+    <section class="bg-gradient-to-r from-blue-700 to-blue-600">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 text-center">
+          <div class="reveal">
+            <div class="w-12 h-12 mx-auto mb-3 rounded-xl bg-white/10 flex items-center justify-center">
+              <img src="assets/icons/loja.svg" alt="" class="w-6 h-6 invert">
+            </div>
+            <h3 class="text-white font-bold text-sm mb-1">Loja Física Completa</h3>
+            <p class="text-white/50 text-xs">No centro de Taquaritinga</p>
+          </div>
+          <div class="reveal">
+            <div class="w-12 h-12 mx-auto mb-3 rounded-xl bg-white/10 flex items-center justify-center">
+              <img src="assets/icons/atendimento.svg" alt="" class="w-6 h-6 invert">
+            </div>
+            <h3 class="text-white font-bold text-sm mb-1">Atendimento Técnico</h3>
+            <p class="text-white/50 text-xs">Equipe que entende de obra</p>
+          </div>
+          <div class="reveal">
+            <div class="w-12 h-12 mx-auto mb-3 rounded-xl bg-white/10 flex items-center justify-center">
+              <img src="assets/icons/variedade.svg" alt="" class="w-6 h-6 invert">
+            </div>
+            <h3 class="text-white font-bold text-sm mb-1">Variedade Real</h3>
+            <p class="text-white/50 text-xs">De fios a placas solares</p>
+          </div>
+          <div class="reveal">
+            <div class="w-12 h-12 mx-auto mb-3 rounded-xl bg-white/10 flex items-center justify-center">
+              <img src="assets/icons/agilidade.svg" alt="" class="w-6 h-6 invert">
+            </div>
+            <h3 class="text-white font-bold text-sm mb-1">Agilidade</h3>
+            <p class="text-white/50 text-xs">Compre rápido, resolva rápido</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SECTION 3: CATEGORIES ========== -->
+    <section id="categorias" class="bg-gradient-to-b from-gray-50 to-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20 lg:py-24">
+        <div class="text-center mb-12 sm:mb-16 reveal">
+          <p class="text-xs tracking-[3px] text-orange-500 font-semibold mb-3">O QUE VOCÊ ENCONTRA</p>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy-800">Soluções para cada etapa da sua obra</h2>
+        </div>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+          <a href="https://wa.me/5516XXXXXXXXX?text=Olá!%20Tenho%20interesse%20em%20produtos%20de%20Elétrica." target="_blank" rel="noopener"
+             class="group bg-white border border-gray-100 rounded-xl p-5 sm:p-6 text-center shadow-sm hover:shadow-lg hover:border-blue-500/30 hover:-translate-y-1 transition-all duration-300 reveal stagger-1">
+            <div class="w-11 h-11 mx-auto mb-3 rounded-lg bg-blue-500/10 flex items-center justify-center">
+              <img src="assets/icons/eletrica.svg" alt="" class="w-5 h-5" style="filter: invert(35%) sepia(98%) saturate(1000%) hue-rotate(200deg);">
+            </div>
+            <h3 class="font-bold text-sm text-navy-800 mb-1 group-hover:text-blue-500 transition-colors">Elétrica</h3>
+            <p class="text-xs text-gray-500 leading-relaxed">Fios, cabos, disjuntores, quadros e componentes</p>
+          </a>
+          <a href="https://wa.me/5516XXXXXXXXX?text=Olá!%20Tenho%20interesse%20em%20produtos%20de%20Hidráulica." target="_blank" rel="noopener"
+             class="group bg-white border border-gray-100 rounded-xl p-5 sm:p-6 text-center shadow-sm hover:shadow-lg hover:border-blue-500/30 hover:-translate-y-1 transition-all duration-300 reveal stagger-2">
+            <div class="w-11 h-11 mx-auto mb-3 rounded-lg bg-blue-500/10 flex items-center justify-center">
+              <img src="assets/icons/hidraulica.svg" alt="" class="w-5 h-5" style="filter: invert(35%) sepia(98%) saturate(1000%) hue-rotate(200deg);">
+            </div>
+            <h3 class="font-bold text-sm text-navy-800 mb-1 group-hover:text-blue-500 transition-colors">Hidráulica</h3>
+            <p class="text-xs text-gray-500 leading-relaxed">Tubos, conexões, registros, válvulas e acessórios</p>
+          </a>
+          <a href="https://wa.me/5516XXXXXXXXX?text=Olá!%20Tenho%20interesse%20em%20produtos%20de%20Iluminação." target="_blank" rel="noopener"
+             class="group bg-white border border-gray-100 rounded-xl p-5 sm:p-6 text-center shadow-sm hover:shadow-lg hover:border-amber-400/30 hover:-translate-y-1 transition-all duration-300 reveal stagger-3">
+            <div class="w-11 h-11 mx-auto mb-3 rounded-lg bg-amber-400/10 flex items-center justify-center">
+              <img src="assets/icons/iluminacao.svg" alt="" class="w-5 h-5" style="filter: invert(60%) sepia(98%) saturate(500%) hue-rotate(10deg);">
+            </div>
+            <h3 class="font-bold text-sm text-navy-800 mb-1 group-hover:text-amber-500 transition-colors">Iluminação</h3>
+            <p class="text-xs text-gray-500 leading-relaxed">Luminárias, lâmpadas, spots, fitas LED e pendentes</p>
+          </a>
+          <a href="https://wa.me/5516XXXXXXXXX?text=Olá!%20Tenho%20interesse%20em%20Ferramentas." target="_blank" rel="noopener"
+             class="group bg-white border border-gray-100 rounded-xl p-5 sm:p-6 text-center shadow-sm hover:shadow-lg hover:border-orange-500/30 hover:-translate-y-1 transition-all duration-300 reveal stagger-4">
+            <div class="w-11 h-11 mx-auto mb-3 rounded-lg bg-orange-500/10 flex items-center justify-center">
+              <img src="assets/icons/ferramentas.svg" alt="" class="w-5 h-5" style="filter: invert(50%) sepia(98%) saturate(800%) hue-rotate(350deg);">
+            </div>
+            <h3 class="font-bold text-sm text-navy-800 mb-1 group-hover:text-orange-500 transition-colors">Ferramentas</h3>
+            <p class="text-xs text-gray-500 leading-relaxed">Ferramentas manuais e elétricas para instalação</p>
+          </a>
+          <a href="https://wa.me/5516XXXXXXXXX?text=Olá!%20Tenho%20interesse%20em%20materiais%20para%20Obra%20e%20Reforma." target="_blank" rel="noopener"
+             class="group bg-white border border-gray-100 rounded-xl p-5 sm:p-6 text-center shadow-sm hover:shadow-lg hover:border-blue-500/30 hover:-translate-y-1 transition-all duration-300 reveal stagger-5">
+            <div class="w-11 h-11 mx-auto mb-3 rounded-lg bg-blue-500/10 flex items-center justify-center">
+              <img src="assets/icons/obra.svg" alt="" class="w-5 h-5" style="filter: invert(35%) sepia(98%) saturate(1000%) hue-rotate(200deg);">
+            </div>
+            <h3 class="font-bold text-sm text-navy-800 mb-1 group-hover:text-blue-500 transition-colors">Obra e Reforma</h3>
+            <p class="text-xs text-gray-500 leading-relaxed">Materiais essenciais para construção e acabamento</p>
+          </a>
+          <a href="https://wa.me/5516XXXXXXXXX?text=Olá!%20Tenho%20interesse%20em%20Boiler%20/%20Aquecedor." target="_blank" rel="noopener"
+             class="group bg-white border border-gray-100 rounded-xl p-5 sm:p-6 text-center shadow-sm hover:shadow-lg hover:border-amber-400/30 hover:-translate-y-1 transition-all duration-300 reveal stagger-6">
+            <div class="w-11 h-11 mx-auto mb-3 rounded-lg bg-amber-400/10 flex items-center justify-center">
+              <img src="assets/icons/boiler.svg" alt="" class="w-5 h-5" style="filter: invert(60%) sepia(98%) saturate(500%) hue-rotate(10deg);">
+            </div>
+            <h3 class="font-bold text-sm text-navy-800 mb-1 group-hover:text-amber-500 transition-colors">Boiler</h3>
+            <p class="text-xs text-gray-500 leading-relaxed">Aquecedores a gás, elétricos e acessórios</p>
+          </a>
+          <a href="https://wa.me/5516XXXXXXXXX?text=Olá!%20Tenho%20interesse%20em%20Energia%20Solar." target="_blank" rel="noopener"
+             class="group bg-white border border-gray-100 rounded-xl p-5 sm:p-6 text-center shadow-sm hover:shadow-lg hover:border-orange-500/30 hover:-translate-y-1 transition-all duration-300 reveal stagger-7">
+            <div class="w-11 h-11 mx-auto mb-3 rounded-lg bg-orange-500/10 flex items-center justify-center">
+              <img src="assets/icons/solar.svg" alt="" class="w-5 h-5" style="filter: invert(50%) sepia(98%) saturate(800%) hue-rotate(350deg);">
+            </div>
+            <h3 class="font-bold text-sm text-navy-800 mb-1 group-hover:text-orange-500 transition-colors">Energia Solar</h3>
+            <p class="text-xs text-gray-500 leading-relaxed">Placas solares, inversores e kits completos</p>
+          </a>
+          <a href="https://wa.me/5516XXXXXXXXX?text=Olá!%20Tenho%20interesse%20em%20soluções%20de%20Conforto%20e%20Economia." target="_blank" rel="noopener"
+             class="group bg-white border border-gray-100 rounded-xl p-5 sm:p-6 text-center shadow-sm hover:shadow-lg hover:border-blue-500/30 hover:-translate-y-1 transition-all duration-300 reveal stagger-8">
+            <div class="w-11 h-11 mx-auto mb-3 rounded-lg bg-blue-500/10 flex items-center justify-center">
+              <img src="assets/icons/conforto.svg" alt="" class="w-5 h-5" style="filter: invert(35%) sepia(98%) saturate(1000%) hue-rotate(200deg);">
+            </div>
+            <h3 class="font-bold text-sm text-navy-800 mb-1 group-hover:text-blue-500 transition-colors">Conforto</h3>
+            <p class="text-xs text-gray-500 leading-relaxed">Ventilação, climatização e soluções de economia</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SECTION 4: DIFERENCIAIS ========== -->
+    <section id="diferenciais" class="relative bg-gradient-to-br from-[#070E1A] to-navy-800 overflow-hidden">
+      <div class="absolute -top-16 -right-16 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20 lg:py-24">
+        <div class="text-center mb-12 sm:mb-16 reveal">
+          <p class="text-xs tracking-[3px] text-orange-500 font-semibold mb-3">DIFERENCIAIS</p>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white">Por que Taquaritinga confia na BENJA</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-5 sm:gap-6">
+          <div class="bg-white/[0.04] border border-white/[0.08] rounded-xl p-6 sm:p-8 text-center reveal">
+            <div class="w-14 h-14 mx-auto mb-4 rounded-xl bg-blue-500/15 flex items-center justify-center">
+              <img src="assets/icons/orientacao.svg" alt="" class="w-6 h-6" style="filter: invert(45%) sepia(98%) saturate(1000%) hue-rotate(190deg);">
+            </div>
+            <h3 class="text-white font-bold text-base sm:text-lg mb-3">Atendimento que Orienta</h3>
+            <p class="text-white/45 text-sm leading-relaxed">Não vendemos só produtos. Ajudamos você a escolher a solução certa para cada situação da sua obra.</p>
+          </div>
+          <div class="relative bg-white/[0.04] border border-orange-500/20 rounded-xl p-6 sm:p-8 text-center reveal">
+            <div class="absolute -top-px left-1/2 -translate-x-1/2 bg-orange-500 text-white text-[10px] font-bold px-4 py-1 rounded-b-lg tracking-wider">PRINCIPAL</div>
+            <div class="w-14 h-14 mx-auto mb-4 rounded-xl bg-orange-500/15 flex items-center justify-center">
+              <img src="assets/icons/tudo-em-um.svg" alt="" class="w-6 h-6" style="filter: invert(50%) sepia(98%) saturate(800%) hue-rotate(350deg);">
+            </div>
+            <h3 class="text-white font-bold text-base sm:text-lg mb-3">Tudo em Um Só Lugar</h3>
+            <p class="text-white/45 text-sm leading-relaxed">Elétrica, hidráulica, iluminação, ferramentas, boiler e energia solar. Você resolve toda a obra em uma única visita.</p>
+          </div>
+          <div class="bg-white/[0.04] border border-white/[0.08] rounded-xl p-6 sm:p-8 text-center reveal">
+            <div class="w-14 h-14 mx-auto mb-4 rounded-xl bg-amber-400/15 flex items-center justify-center">
+              <img src="assets/icons/relogio.svg" alt="" class="w-6 h-6" style="filter: invert(70%) sepia(98%) saturate(500%) hue-rotate(10deg);">
+            </div>
+            <h3 class="text-white font-bold text-base sm:text-lg mb-3">Agilidade que Resolve</h3>
+            <p class="text-white/45 text-sm leading-relaxed">Sabemos que obra não espera. Atendimento rápido, estoque preparado e equipe pronta para ajudar.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SECTION 5: QUEM COMPRA ========== -->
+    <section class="bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20 lg:py-24">
+        <div class="text-center mb-12 sm:mb-16 reveal">
+          <p class="text-xs tracking-[3px] text-orange-500 font-semibold mb-3">PARA QUEM É</p>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy-800">A BENJA é para quem faz acontecer</h2>
+          <p class="text-gray-500 text-sm sm:text-base mt-3 max-w-xl mx-auto">Do profissional experiente ao cliente que está reformando pela primeira vez</p>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4 sm:gap-5 max-w-3xl mx-auto">
+          <div class="flex items-center gap-4 bg-gray-50 border border-gray-100 rounded-xl p-5 reveal">
+            <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center flex-shrink-0">
+              <img src="assets/icons/construindo.svg" alt="" class="w-6 h-6" style="filter: invert(35%) sepia(98%) saturate(1000%) hue-rotate(200deg);">
+            </div>
+            <div>
+              <h3 class="font-bold text-sm text-navy-800">Quem está construindo</h3>
+              <p class="text-xs text-gray-500 mt-0.5">Material completo do início ao acabamento</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 bg-gray-50 border border-gray-100 rounded-xl p-5 reveal">
+            <div class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center flex-shrink-0">
+              <img src="assets/icons/reformando.svg" alt="" class="w-6 h-6" style="filter: invert(50%) sepia(98%) saturate(800%) hue-rotate(350deg);">
+            </div>
+            <div>
+              <h3 class="font-bold text-sm text-navy-800">Quem está reformando</h3>
+              <p class="text-xs text-gray-500 mt-0.5">Soluções práticas para trocar e melhorar</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 bg-gray-50 border border-gray-100 rounded-xl p-5 reveal">
+            <div class="w-12 h-12 rounded-xl bg-amber-400/10 flex items-center justify-center flex-shrink-0">
+              <img src="assets/icons/profissional.svg" alt="" class="w-6 h-6" style="filter: invert(60%) sepia(98%) saturate(500%) hue-rotate(10deg);">
+            </div>
+            <div>
+              <h3 class="font-bold text-sm text-navy-800">Profissionais da área</h3>
+              <p class="text-xs text-gray-500 mt-0.5">Eletricistas, encanadores, instaladores e pedreiros</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 bg-gray-50 border border-gray-100 rounded-xl p-5 reveal">
+            <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center flex-shrink-0">
+              <img src="assets/icons/praticidade.svg" alt="" class="w-6 h-6" style="filter: invert(35%) sepia(98%) saturate(1000%) hue-rotate(200deg);">
+            </div>
+            <div>
+              <h3 class="font-bold text-sm text-navy-800">Quem quer praticidade</h3>
+              <p class="text-xs text-gray-500 mt-0.5">Comprar com orientação, sem complicação</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
 </body>
