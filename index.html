@@ -96,6 +96,40 @@
       animation: pulse-whatsapp 2s ease-in-out infinite;
     }
 
+    /* WhatsApp badge entrance + subtle float */
+    @keyframes badge-in {
+      from { opacity: 0; transform: translateX(8px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+    .whatsapp-badge {
+      animation: badge-in 0.5s ease-out 1.2s both;
+    }
+
+    /* Brand logos — uniform sizing, full color, subtle scale on hover */
+    .brand-logo {
+      height: 32px;
+      width: auto;
+      max-width: 130px;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+    .brand-logo:hover {
+      transform: scale(1.05);
+    }
+    @media (min-width: 640px) { .brand-logo { height: 40px; max-width: 150px; } }
+    @media (min-width: 1024px) { .brand-logo { height: 44px; max-width: 160px; } }
+
+    /* Larger variant — for logos whose source PNG has lots of padding/canvas
+       around the actual mark, so they need to render bigger to match the others. */
+    .brand-logo-lg { height: 56px; max-width: 180px; }
+    @media (min-width: 640px)  { .brand-logo-lg { height: 68px; max-width: 210px; } }
+    @media (min-width: 1024px) { .brand-logo-lg { height: 76px; max-width: 230px; } }
+
+    /* Extra-large variant — for logos with even more whitespace around the mark */
+    .brand-logo-xl { height: 72px; max-width: 230px; }
+    @media (min-width: 640px)  { .brand-logo-xl { height: 88px; max-width: 270px; } }
+    @media (min-width: 1024px) { .brand-logo-xl { height: 100px; max-width: 300px; } }
+
     /* Scroll reveal animation */
     .reveal {
       opacity: 0;
@@ -252,10 +286,10 @@
       <!-- Navigation links inside hero -->
       <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 pt-6 sm:pt-8">
         <div class="flex justify-end items-center gap-6">
-          <a href="#categorias" class="hidden sm:inline text-white/45 hover:text-white text-sm font-medium tracking-wide transition-colors">Categorias</a>
-          <a href="#diferenciais" class="hidden sm:inline text-white/45 hover:text-white text-sm font-medium tracking-wide transition-colors">Diferenciais</a>
-          <a href="#sobre" class="hidden sm:inline text-white/45 hover:text-white text-sm font-medium tracking-wide transition-colors">Sobre</a>
-          <a href="#contato" class="hidden sm:inline text-white/45 hover:text-white text-sm font-medium tracking-wide transition-colors">Contato</a>
+          <a href="#categorias" class="hidden sm:inline text-white/70 hover:text-white text-sm font-medium tracking-wide transition-colors">Categorias</a>
+          <a href="#diferenciais" class="hidden sm:inline text-white/70 hover:text-white text-sm font-medium tracking-wide transition-colors">Diferenciais</a>
+          <a href="#sobre" class="hidden sm:inline text-white/70 hover:text-white text-sm font-medium tracking-wide transition-colors">Sobre</a>
+          <a href="#contato" class="hidden sm:inline text-white/70 hover:text-white text-sm font-medium tracking-wide transition-colors">Contato</a>
           <a href="tel:+551632531567" class="text-orange-500 hover:text-orange-400 text-sm font-semibold transition-colors">
             📞 (16) 3253-1567
           </a>
@@ -271,7 +305,7 @@
             confiança começa<br>
             <span class="text-gradient-orange">aqui.</span>
           </h1>
-          <p class="text-sm sm:text-base text-white/50 leading-relaxed mb-5 max-w-lg">
+          <p class="text-sm sm:text-base text-white/75 leading-relaxed mb-5 max-w-lg">
             A maior variedade em elétrica, hidráulica e iluminação de Taquaritinga. Atendimento especializado para quem constrói, reforma ou instala.
           </p>
           <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-5">
@@ -339,19 +373,19 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-12">
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 text-center">
           <div class="reveal">
-            <div class="text-2xl sm:text-3xl lg:text-4xl font-black text-blue-400 mb-1">10+</div>
+            <div class="text-2xl sm:text-3xl lg:text-4xl font-black text-blue-400 mb-1 stat-counter" data-target="10" data-suffix="+">0</div>
             <div class="text-xs sm:text-sm text-white/40 font-medium">Anos no mercado</div>
           </div>
           <div class="reveal">
-            <div class="text-2xl sm:text-3xl lg:text-4xl font-black text-orange-500 mb-1">3.000+</div>
+            <div class="text-2xl sm:text-3xl lg:text-4xl font-black text-orange-500 mb-1 stat-counter" data-target="3000" data-suffix="+" data-format="thousands">0</div>
             <div class="text-xs sm:text-sm text-white/40 font-medium">Clientes atendidos</div>
           </div>
           <div class="reveal">
-            <div class="text-2xl sm:text-3xl lg:text-4xl font-black text-blue-400 mb-1">5.000+</div>
+            <div class="text-2xl sm:text-3xl lg:text-4xl font-black text-blue-400 mb-1 stat-counter" data-target="5000" data-suffix="+" data-format="thousands">0</div>
             <div class="text-xs sm:text-sm text-white/40 font-medium">Produtos em estoque</div>
           </div>
           <div class="reveal">
-            <div class="text-2xl sm:text-3xl lg:text-4xl font-black text-amber-400 mb-1">4.9 ★</div>
+            <div class="text-2xl sm:text-3xl lg:text-4xl font-black text-amber-400 mb-1 stat-counter" data-target="4.9" data-suffix=" ★" data-decimals="1">0</div>
             <div class="text-xs sm:text-sm text-white/40 font-medium">Avaliação no Google</div>
           </div>
         </div>
@@ -441,18 +475,16 @@
           <p class="text-xs tracking-[3px] text-orange-500 font-semibold mb-3">MARCAS QUE VOCÊ ENCONTRA</p>
           <h2 class="text-xl sm:text-2xl font-extrabold text-navy-800">Trabalhamos com as melhores marcas do mercado</h2>
         </div>
-        <div class="flex flex-wrap justify-center items-center gap-5 sm:gap-8 lg:gap-12 reveal">
-          <!-- Marcas em texto estilizado (substituir por logos reais quando disponíveis) -->
-          <span class="text-base sm:text-lg font-bold text-gray-300 hover:text-blue-500 transition-colors cursor-default">Tigre</span>
-          <span class="text-base sm:text-lg font-bold text-gray-300 hover:text-blue-500 transition-colors cursor-default">Tramontina</span>
-          <span class="text-base sm:text-lg font-bold text-gray-300 hover:text-blue-500 transition-colors cursor-default">Schneider</span>
-          <span class="text-base sm:text-lg font-bold text-gray-300 hover:text-blue-500 transition-colors cursor-default">Philips</span>
-          <span class="text-base sm:text-lg font-bold text-gray-300 hover:text-blue-500 transition-colors cursor-default">Lorenzetti</span>
-          <span class="text-base sm:text-lg font-bold text-gray-300 hover:text-blue-500 transition-colors cursor-default">Amanco</span>
-          <span class="text-base sm:text-lg font-bold text-gray-300 hover:text-blue-500 transition-colors cursor-default">Elgin</span>
-          <span class="text-base sm:text-lg font-bold text-gray-300 hover:text-blue-500 transition-colors cursor-default">Intelbras</span>
-          <span class="text-base sm:text-lg font-bold text-gray-300 hover:text-blue-500 transition-colors cursor-default">Vonder</span>
-          <span class="text-base sm:text-lg font-bold text-gray-300 hover:text-blue-500 transition-colors cursor-default">Pial</span>
+        <div class="flex flex-wrap justify-center items-center gap-x-8 gap-y-6 sm:gap-x-12 lg:gap-x-14 reveal">
+          <img src="imagens/marcas/tigre.png"        alt="Tigre"      class="brand-logo" loading="lazy">
+          <img src="imagens/marcas/tramontina.png"   alt="Tramontina" class="brand-logo brand-logo-xl" loading="lazy">
+          <img src="imagens/marcas/schneider.png"    alt="Schneider"  class="brand-logo brand-logo-lg" loading="lazy">
+          <img src="imagens/marcas/philips.png"      alt="Philips"    class="brand-logo brand-logo-lg" loading="lazy">
+          <img src="imagens/marcas/lorenzetti.png"   alt="Lorenzetti" class="brand-logo brand-logo-lg" loading="lazy">
+          <img src="imagens/marcas/amanco.png"       alt="Amanco"     class="brand-logo" loading="lazy">
+          <img src="imagens/marcas/elgin.png"        alt="Elgin"      class="brand-logo brand-logo-lg" loading="lazy">
+          <img src="imagens/marcas/intelbras.png"    alt="Intelbras"  class="brand-logo brand-logo-lg" loading="lazy">
+          <img src="imagens/marcas/vonder.png"       alt="Vonder"     class="brand-logo brand-logo-lg" loading="lazy">
         </div>
         <p class="text-center text-xs text-gray-400 mt-6">E muitas outras. Consulte disponibilidade.</p>
       </div>
@@ -855,12 +887,21 @@
     </div>
   </footer>
 
-  <!-- ========== WHATSAPP FLOATING BUTTON ========== -->
-  <a href="https://wa.me/5516XXXXXXXXX?text=Olá!%20Vim%20pelo%20site%20da%20BENJA.%20Gostaria%20de%20mais%20informações." target="_blank" rel="noopener"
-     aria-label="Conversar no WhatsApp"
-     class="fixed bottom-4 right-4 z-50 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg shadow-green-500/30 animate-pulse-whatsapp hover:scale-110 transition-transform">
-    <img src="assets/icons/whatsapp.svg" alt="" class="w-7 h-7 invert">
-  </a>
+  <!-- ========== WHATSAPP FLOATING BUTTON + BADGE ========== -->
+  <div class="fixed bottom-4 right-4 z-50 flex items-center gap-2">
+    <div class="hidden sm:flex items-center gap-1.5 bg-white text-navy-800 text-xs font-semibold px-3 py-2 rounded-full shadow-lg whatsapp-badge">
+      <span class="relative flex h-2 w-2">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+      </span>
+      Resposta em até 5 min
+    </div>
+    <a href="https://wa.me/5516XXXXXXXXX?text=Olá!%20Vim%20pelo%20site%20da%20BENJA.%20Gostaria%20de%20mais%20informações." target="_blank" rel="noopener"
+       aria-label="Conversar no WhatsApp"
+       class="w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg shadow-green-500/30 animate-pulse-whatsapp hover:scale-110 transition-transform">
+      <img src="assets/icons/whatsapp.svg" alt="" class="w-7 h-7 invert">
+    </a>
+  </div>
 
   <!-- ========== BACK TO TOP BUTTON ========== -->
   <!-- Positioned above WhatsApp button to avoid overlap -->
@@ -891,6 +932,41 @@
     }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
     revealElements.forEach(el => revealObserver.observe(el));
+
+    // === Animated Stat Counters ===
+    const formatNumber = (value, decimals, format) => {
+      if (decimals > 0) return value.toFixed(decimals);
+      const rounded = Math.floor(value);
+      if (format === 'thousands') return rounded.toLocaleString('pt-BR');
+      return String(rounded);
+    };
+    const animateCounter = (el) => {
+      const target = parseFloat(el.dataset.target);
+      const suffix = el.dataset.suffix || '';
+      const decimals = parseInt(el.dataset.decimals || '0', 10);
+      const format = el.dataset.format || '';
+      const duration = 1600;
+      const startTime = performance.now();
+      const tick = (now) => {
+        const progress = Math.min((now - startTime) / duration, 1);
+        // easeOutQuart for a punchy finish
+        const eased = 1 - Math.pow(1 - progress, 4);
+        const current = target * eased;
+        el.textContent = formatNumber(current, decimals, format) + suffix;
+        if (progress < 1) requestAnimationFrame(tick);
+        else el.textContent = formatNumber(target, decimals, format) + suffix;
+      };
+      requestAnimationFrame(tick);
+    };
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.4 });
+    document.querySelectorAll('.stat-counter').forEach(el => counterObserver.observe(el));
 
     // === Back to Top Button ===
     const backToTop = document.getElementById('back-to-top');
